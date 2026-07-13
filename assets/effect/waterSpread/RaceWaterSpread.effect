@@ -1,0 +1,124 @@
+// Water-spread (ripple distortion) sprite shader — single clean shockwave reveal,
+// reworked from github.com/yeshao2069/CocosCreatorShader (v3.7.x WaterSpread) for Cocos 3.8.7.
+// One soft wavefront expands from `center`; with the sprite's texture set to a snapshot
+// RenderTexture of the 3D scene, the frozen screen appears to ripple once as it reveals.
+//
+// Why this version reads as a clean shockwave (not noisy moiré):
+//   - LOW frequency (wave_freq ~38, was 100) → 1–2 readable crests, no fingerprint moiré.
+//   - Phase is tied to the wavefront (dist - wave_offset), so crests TRAVEL OUTWARD with the
+//     front instead of shimmering in place off the global clock (cc_time).
+//   - smoothstep band + radial falloff → soft in/out, stronger at centre, gentle at the edges.
+// Uniforms (center/canvas_size/wave_radius/wave_offset set per-frame by ScreenWaterSpread.ts;
+// wave_freq/wave_amp tuned on the material):
+//   center      — ripple origin in UV (0..1)
+//   canvas_size — screen px (for aspect correction)
+//   wave_radius — width of the soft ripple band around the front
+//   wave_offset — current wavefront distance (animated 0 → ~0.8; band off-screen = no distortion)
+//   wave_freq   — crest density inside the band (lower = fewer, cleaner rings)
+//   wave_amp    — peak UV refraction amount
+CCEffect %{
+  techniques:
+  - passes:
+    - vert: sprite-vs:vert
+      frag: sprite-fs:frag
+      depthStencilState:
+        depthTest: false
+        depthWrite: false
+      blendState:
+        targets:
+        - blend: true
+          blendSrc: src_alpha
+          blendDst: one_minus_src_alpha
+          blendDstAlpha: one_minus_src_alpha
+      rasterizerState:
+        cullMode: none
+      properties:
+        alphaThreshold: { value: 0.5 }
+        center: { value: [ 0.5, 0.5 ] }
+        canvas_size: { value: [ 1080.0, 1920.0 ] }
+        wave_radius: { value: 0.2 }
+        wave_offset: { value: 2.0 }
+        wave_freq: { value: 38.0 }
+        wave_amp: { value: 0.045 }
+}%
+
+CCProgram sprite-vs %{
+  precision highp float;
+  #include <builtin/uniforms/cc-global>
+  #if USE_LOCAL
+    #include <builtin/uniforms/cc-local>
+  #endif
+
+  in vec3 a_position;
+  in vec2 a_texCoord;
+  in vec4 a_color;
+
+  out vec4 v_color;
+  out vec2 v_uv0;
+
+  vec4 vert () {
+    vec4 pos = vec4(a_position, 1);
+
+    #if USE_LOCAL
+      pos = cc_matWorld * pos;
+    #endif
+
+    #if USE_PIXEL_ALIGNMENT
+      pos = cc_matView * pos;
+      pos.xyz = floor(pos.xyz);
+      pos = cc_matProj * pos;
+    #else
+      pos = cc_matViewProj * pos;
+    #endif
+
+    v_uv0 = a_texCoord;
+    v_color = a_color;
+
+    return pos;
+  }
+}%
+
+CCProgram sprite-fs %{
+  precision highp float;
+  #include <builtin/internal/embedded-alpha>
+  #include <builtin/internal/alpha-test>
+  #include <builtin/uniforms/cc-global>
+
+  in vec4 v_color;
+  in vec2 v_uv0;
+
+  #pragma builtin(local)
+  layout(set = 2, binding = 11) uniform sampler2D cc_spriteTexture;
+
+  uniform ARGS {
+    vec2 center;
+    vec2 canvas_size;
+    float wave_radius;
+    float wave_offset;
+    float wave_freq;
+    float wave_amp;
+  };
+
+  vec4 frag () {
+    // Vector from the ripple origin to this pixel, aspect-corrected so the rings stay circular.
+    vec2 dir = (v_uv0 - center) * vec2(canvas_size.x / canvas_size.y, 1.0);
+    float dist = length(dir);
+
+    // Signed distance to the travelling wavefront (0 at the crest, negative just behind it).
+    float d = dist - wave_offset;
+
+    // Soft band around the front: smooth in/out (no hard triangular edge).
+    float env = 1.0 - smoothstep(0.0, wave_radius, abs(d));
+
+    // Energy loss — strongest at the centre, gently weaker toward the screen edges.
+    float radial = 1.0 / (1.0 + dist * 2.5);
+
+    // Phase tied to the front → the 1–2 crests TRAVEL OUTWARD with the wave (not shimmer in place).
+    float wave = sin(d * wave_freq) * env * radial * wave_amp;
+
+    vec2 offset = normalize(dir + vec2(1e-5)) * wave;
+    vec2 uv = v_uv0 + offset;
+
+    return texture(cc_spriteTexture, uv) * v_color;
+  }
+}%

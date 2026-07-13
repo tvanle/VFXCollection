@@ -1,0 +1,46 @@
+{
+  "ver": "1.0.27",
+  "importer": "image",
+  "imported": true,
+  "uuid": "7abc5df6-b0c0-48d2-bc07-0948908f5f13",
+  "files": [
+    ".json",
+    ".png"
+  ],
+  "subMetas": {
+    "6c48a": {
+      "importer": "texture",
+      "uuid": "7abc5df6-b0c0-48d2-bc07-0948908f5f13@6c48a",
+      "displayName": "confetti",
+      "id": "6c48a",
+      "name": "texture",
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "none",
+        "anisotropy": 0,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "7abc5df6-b0c0-48d2-bc07-0948908f5f13",
+        "visible": false
+      },
+      "ver": "1.0.22",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "hasAlpha": true,
+    "type": "texture",
+    "fixAlphaTransparencyArtifacts": false,
+    "redirect": "7abc5df6-b0c0-48d2-bc07-0948908f5f13@6c48a",
+    "compressSettings": {
+      "useCompressTexture": true,
+      "presetId": "0attPE055Epbj98A/N6nu6"
+    }
+  }
+}

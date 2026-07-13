@@ -1,0 +1,123 @@
+// slash.effect — Slash arc VFX (port từ "Unity Melee Slash | Shader Graph & VFX").
+// Reveal quét theo `ctrl.x = progress` + dissolve cháy cạnh (noise fbm procedural) + fire color ramp.
+// Additive premultiplied: frag trả vec4(rgb*a, a), blend one/one → glow lửa. Khuôn bám dirt_path.effect.
+//   params = [feather, edge, dissolveStart, sweepSpeed]  |  ctrl = [progress, globalAlpha, -, -]
+CCEffect %{
+  techniques:
+  - name: default
+    passes:
+    - vert: slash-vs:vert
+      frag: slash-fs:frag
+      depthStencilState:
+        depthTest: true
+        depthWrite: false
+      blendState:
+        targets:
+        - blend: true
+          blendSrc: one
+          blendDst: one
+          blendSrcAlpha: one
+          blendDstAlpha: one
+      rasterizerState:
+        cullMode: none
+      properties:
+        colorInner: { value: [1.0, 0.95, 0.75, 1.0], editor: { type: color } }
+        colorMid:   { value: [1.0, 0.50, 0.12, 1.0], editor: { type: color } }
+        colorOuter: { value: [0.75, 0.15, 0.02, 1.0], editor: { type: color } }
+        edgeColor:  { value: [1.0, 0.85, 0.40, 1.0], editor: { type: color } }
+        params:     { value: [0.14, 0.10, 0.50, 1.7] }
+        ctrl:       { value: [0.0, 1.0, 0.0, 0.0] }
+        noiseScale: { value: 4.0, editor: { slide: true, range: [0.5, 20.0], step: 0.5 } }
+}%
+
+CCProgram slash-vs %{
+  precision highp float;
+  #include <builtin/uniforms/cc-global>
+  #include <builtin/uniforms/cc-local>
+
+  in vec3 a_position;
+  in vec2 a_texCoord;
+
+  out vec2 uv0;
+
+  vec4 vert () {
+    uv0 = a_texCoord;
+    return cc_matViewProj * cc_matWorld * vec4(a_position, 1.0);
+  }
+}%
+
+CCProgram slash-fs %{
+  precision highp float;
+
+  in vec2 uv0;
+
+  uniform Constant {
+    vec4 colorInner;
+    vec4 colorMid;
+    vec4 colorOuter;
+    vec4 edgeColor;
+    vec4 params;
+    vec4 ctrl;
+    float noiseScale;
+  };
+
+  float hash (vec2 p) {
+    return fract(sin(dot(p, vec2(127.1, 311.7))) * 43758.5453123);
+  }
+  float vnoise (vec2 p) {
+    vec2 i = floor(p);
+    vec2 f = fract(p);
+    float a = hash(i);
+    float b = hash(i + vec2(1.0, 0.0));
+    float c = hash(i + vec2(0.0, 1.0));
+    float d = hash(i + vec2(1.0, 1.0));
+    vec2 u = f * f * (3.0 - 2.0 * f);
+    return mix(mix(a, b, u.x), mix(c, d, u.x), u.y);
+  }
+  float fbm (vec2 p) {
+    float s = 0.0;
+    float amp = 0.5;
+    for (int i = 0; i < 4; i++) {
+      s += amp * vnoise(p);
+      p *= 2.0;
+      amp *= 0.5;
+    }
+    return s;
+  }
+
+  vec4 frag () {
+    float u = uv0.x;                                  // dọc cung: 0 đuôi -> 1 mũi
+    float thick = 1.0 - abs(uv0.y - 0.5) * 2.0;       // ngang bề dày: 1 giữa, 0 mép
+    float band = smoothstep(0.0, 0.5, thick);
+    float ends = smoothstep(0.0, 0.05, u) * smoothstep(0.0, 0.05, 1.0 - u);
+
+    float progress      = ctrl.x;
+    float gAlpha        = ctrl.y;
+    float feather       = params.x;
+    float edge          = params.y;
+    float dissolveStart = params.z;
+    float sweepSpeed    = params.w;
+
+    // reveal: quét mở đuôi -> mũi
+    float sweep  = clamp(progress * sweepSpeed, 0.0, 1.0);
+    float reveal = smoothstep(sweep, sweep - feather, u);
+
+    // noise fbm cuộn nhẹ theo progress → dissolve/cháy
+    float n = fbm(vec2(u * noiseScale * 3.0, uv0.y * noiseScale) + vec2(progress * 1.5, 0.0));
+
+    float dissolveT = clamp((progress - dissolveStart) / max(1.0 - dissolveStart, 1e-3), 0.0, 1.0);
+    float dmask = smoothstep(dissolveT - edge, dissolveT + edge, n);
+    float eband = smoothstep(dissolveT - edge, dissolveT, n) * (1.0 - smoothstep(dissolveT, dissolveT + edge, n));
+
+    // fire ramp theo bề dày
+    vec3 col = mix(colorOuter.rgb, colorMid.rgb, smoothstep(0.0, 0.5, thick));
+    col = mix(col, colorInner.rgb, smoothstep(0.5, 1.0, thick));
+    col *= (0.55 + 0.7 * n);
+    col += edgeColor.rgb * eband * 1.6;
+
+    float a = band * ends * reveal * dmask * gAlpha;
+    a = clamp(a + eband * reveal * band * ends * 0.7 * gAlpha, 0.0, 1.0);
+
+    return vec4(col * a, a);
+  }
+}%
