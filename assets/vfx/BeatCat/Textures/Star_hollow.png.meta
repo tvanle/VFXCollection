@@ -2,7 +2,7 @@
   "ver": "1.0.27",
   "importer": "image",
   "imported": true,
-  "uuid": "8412310c-64cb-430d-8f01-e6ff25bc5054",
+  "uuid": "ed50c1ea-2821-46ac-b37f-08255f35d449",
   "files": [
     ".json",
     ".png"
@@ -10,7 +10,7 @@
   "subMetas": {
     "6c48a": {
       "importer": "texture",
-      "uuid": "8412310c-64cb-430d-8f01-e6ff25bc5054@6c48a",
+      "uuid": "ed50c1ea-2821-46ac-b37f-08255f35d449@6c48a",
       "displayName": "Star_hollow",
       "id": "6c48a",
       "name": "texture",
@@ -22,7 +22,7 @@
         "mipfilter": "none",
         "anisotropy": 0,
         "isUuid": true,
-        "imageUuidOrDatabaseUri": "8412310c-64cb-430d-8f01-e6ff25bc5054",
+        "imageUuidOrDatabaseUri": "ed50c1ea-2821-46ac-b37f-08255f35d449",
         "visible": false
       },
       "ver": "1.0.22",
@@ -37,6 +37,6 @@
     "hasAlpha": true,
     "type": "texture",
     "fixAlphaTransparencyArtifacts": false,
-    "redirect": "8412310c-64cb-430d-8f01-e6ff25bc5054@6c48a"
+    "redirect": "ed50c1ea-2821-46ac-b37f-08255f35d449@6c48a"
   }
 }
