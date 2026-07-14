@@ -2,7 +2,7 @@
   "ver": "1.0.27",
   "importer": "image",
   "imported": true,
-  "uuid": "5834b6f4-ee12-4cc8-9b26-8f627dcffe5c",
+  "uuid": "d9315826-2377-4151-bf0c-05f6bbe262b6",
   "files": [
     ".json",
     ".png"
@@ -10,7 +10,7 @@
   "subMetas": {
     "6c48a": {
       "importer": "texture",
-      "uuid": "5834b6f4-ee12-4cc8-9b26-8f627dcffe5c@6c48a",
+      "uuid": "d9315826-2377-4151-bf0c-05f6bbe262b6@6c48a",
       "displayName": "pillow_particle2",
       "id": "6c48a",
       "name": "texture",
@@ -22,7 +22,7 @@
         "mipfilter": "none",
         "anisotropy": 0,
         "isUuid": true,
-        "imageUuidOrDatabaseUri": "5834b6f4-ee12-4cc8-9b26-8f627dcffe5c",
+        "imageUuidOrDatabaseUri": "d9315826-2377-4151-bf0c-05f6bbe262b6",
         "visible": false
       },
       "ver": "1.0.22",
@@ -37,6 +37,6 @@
     "hasAlpha": true,
     "type": "texture",
     "fixAlphaTransparencyArtifacts": false,
-    "redirect": "5834b6f4-ee12-4cc8-9b26-8f627dcffe5c@6c48a"
+    "redirect": "d9315826-2377-4151-bf0c-05f6bbe262b6@6c48a"
   }
 }

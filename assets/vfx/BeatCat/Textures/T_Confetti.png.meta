@@ -2,7 +2,7 @@
   "ver": "1.0.27",
   "importer": "image",
   "imported": true,
-  "uuid": "51899586-a630-4adc-91ef-ef9684f488b8",
+  "uuid": "ac4494f1-2567-46a0-9508-a5a5ff78f512",
   "files": [
     ".json",
     ".png"
@@ -10,7 +10,7 @@
   "subMetas": {
     "6c48a": {
       "importer": "texture",
-      "uuid": "51899586-a630-4adc-91ef-ef9684f488b8@6c48a",
+      "uuid": "ac4494f1-2567-46a0-9508-a5a5ff78f512@6c48a",
       "displayName": "T_Confetti",
       "id": "6c48a",
       "name": "texture",
@@ -22,7 +22,7 @@
         "mipfilter": "none",
         "anisotropy": 0,
         "isUuid": true,
-        "imageUuidOrDatabaseUri": "51899586-a630-4adc-91ef-ef9684f488b8",
+        "imageUuidOrDatabaseUri": "ac4494f1-2567-46a0-9508-a5a5ff78f512",
         "visible": false
       },
       "ver": "1.0.22",
@@ -37,6 +37,6 @@
     "hasAlpha": true,
     "type": "texture",
     "fixAlphaTransparencyArtifacts": false,
-    "redirect": "51899586-a630-4adc-91ef-ef9684f488b8@6c48a"
+    "redirect": "ac4494f1-2567-46a0-9508-a5a5ff78f512@6c48a"
   }
 }

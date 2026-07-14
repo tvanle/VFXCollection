@@ -2,7 +2,7 @@
   "ver": "1.0.27",
   "importer": "image",
   "imported": true,
-  "uuid": "2fdebecd-8dba-4c1d-af42-1ae1b7e3a77f",
+  "uuid": "53bde844-36f4-437a-b34e-b45a2bdc59a4",
   "files": [
     ".json",
     ".png"
@@ -10,7 +10,7 @@
   "subMetas": {
     "6c48a": {
       "importer": "texture",
-      "uuid": "2fdebecd-8dba-4c1d-af42-1ae1b7e3a77f@6c48a",
+      "uuid": "53bde844-36f4-437a-b34e-b45a2bdc59a4@6c48a",
       "displayName": "p_water_02",
       "id": "6c48a",
       "name": "texture",
@@ -22,7 +22,7 @@
         "mipfilter": "none",
         "anisotropy": 0,
         "isUuid": true,
-        "imageUuidOrDatabaseUri": "2fdebecd-8dba-4c1d-af42-1ae1b7e3a77f",
+        "imageUuidOrDatabaseUri": "53bde844-36f4-437a-b34e-b45a2bdc59a4",
         "visible": false
       },
       "ver": "1.0.22",
@@ -37,6 +37,6 @@
     "hasAlpha": true,
     "type": "texture",
     "fixAlphaTransparencyArtifacts": false,
-    "redirect": "2fdebecd-8dba-4c1d-af42-1ae1b7e3a77f@6c48a"
+    "redirect": "53bde844-36f4-437a-b34e-b45a2bdc59a4@6c48a"
   }
 }

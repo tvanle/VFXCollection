@@ -2,7 +2,7 @@
   "ver": "1.0.27",
   "importer": "image",
   "imported": true,
-  "uuid": "2ed245c9-1b9a-477e-94e7-d717f9a206b0",
+  "uuid": "9f09ded6-bca3-44b9-8c27-4da8648f3509",
   "files": [
     ".json",
     ".png"
@@ -10,7 +10,7 @@
   "subMetas": {
     "6c48a": {
       "importer": "texture",
-      "uuid": "2ed245c9-1b9a-477e-94e7-d717f9a206b0@6c48a",
+      "uuid": "9f09ded6-bca3-44b9-8c27-4da8648f3509@6c48a",
       "displayName": "WindBlades_Animated",
       "id": "6c48a",
       "name": "texture",
@@ -22,7 +22,7 @@
         "mipfilter": "none",
         "anisotropy": 0,
         "isUuid": true,
-        "imageUuidOrDatabaseUri": "2ed245c9-1b9a-477e-94e7-d717f9a206b0",
+        "imageUuidOrDatabaseUri": "9f09ded6-bca3-44b9-8c27-4da8648f3509",
         "visible": false
       },
       "ver": "1.0.22",
@@ -37,6 +37,6 @@
     "hasAlpha": true,
     "type": "texture",
     "fixAlphaTransparencyArtifacts": false,
-    "redirect": "2ed245c9-1b9a-477e-94e7-d717f9a206b0@6c48a"
+    "redirect": "9f09ded6-bca3-44b9-8c27-4da8648f3509@6c48a"
   }
 }

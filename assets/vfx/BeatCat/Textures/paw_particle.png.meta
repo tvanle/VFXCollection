@@ -2,7 +2,7 @@
   "ver": "1.0.27",
   "importer": "image",
   "imported": true,
-  "uuid": "460e4fce-cfad-48f6-a7e8-a5e402fee9e1",
+  "uuid": "db684f04-e835-4cdb-b6a4-54303ba9bb01",
   "files": [
     ".json",
     ".png"
@@ -10,7 +10,7 @@
   "subMetas": {
     "6c48a": {
       "importer": "texture",
-      "uuid": "460e4fce-cfad-48f6-a7e8-a5e402fee9e1@6c48a",
+      "uuid": "db684f04-e835-4cdb-b6a4-54303ba9bb01@6c48a",
       "displayName": "paw_particle",
       "id": "6c48a",
       "name": "texture",
@@ -22,7 +22,7 @@
         "mipfilter": "none",
         "anisotropy": 0,
         "isUuid": true,
-        "imageUuidOrDatabaseUri": "460e4fce-cfad-48f6-a7e8-a5e402fee9e1",
+        "imageUuidOrDatabaseUri": "db684f04-e835-4cdb-b6a4-54303ba9bb01",
         "visible": false
       },
       "ver": "1.0.22",
@@ -37,6 +37,6 @@
     "hasAlpha": true,
     "type": "texture",
     "fixAlphaTransparencyArtifacts": false,
-    "redirect": "460e4fce-cfad-48f6-a7e8-a5e402fee9e1@6c48a"
+    "redirect": "db684f04-e835-4cdb-b6a4-54303ba9bb01@6c48a"
   }
 }

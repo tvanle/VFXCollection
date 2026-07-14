@@ -2,7 +2,7 @@
   "ver": "1.0.27",
   "importer": "image",
   "imported": true,
-  "uuid": "bc42f25b-317a-4d30-8892-8f78c665ad10",
+  "uuid": "5a943bcc-07fa-4b7d-9b21-349d14715506",
   "files": [
     ".json",
     ".png"
@@ -10,7 +10,7 @@
   "subMetas": {
     "6c48a": {
       "importer": "texture",
-      "uuid": "bc42f25b-317a-4d30-8892-8f78c665ad10@6c48a",
+      "uuid": "5a943bcc-07fa-4b7d-9b21-349d14715506@6c48a",
       "displayName": "T_RainBow",
       "id": "6c48a",
       "name": "texture",
@@ -22,7 +22,7 @@
         "mipfilter": "none",
         "anisotropy": 0,
         "isUuid": true,
-        "imageUuidOrDatabaseUri": "bc42f25b-317a-4d30-8892-8f78c665ad10",
+        "imageUuidOrDatabaseUri": "5a943bcc-07fa-4b7d-9b21-349d14715506",
         "visible": false
       },
       "ver": "1.0.22",
@@ -34,9 +34,9 @@
     }
   },
   "userData": {
-    "hasAlpha": false,
+    "hasAlpha": true,
     "type": "texture",
     "fixAlphaTransparencyArtifacts": false,
-    "redirect": "bc42f25b-317a-4d30-8892-8f78c665ad10@6c48a"
+    "redirect": "5a943bcc-07fa-4b7d-9b21-349d14715506@6c48a"
   }
 }

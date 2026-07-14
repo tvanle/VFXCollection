@@ -2,7 +2,7 @@
   "ver": "1.0.27",
   "importer": "image",
   "imported": true,
-  "uuid": "d022e794-eb24-47a5-b3de-a1418756370d",
+  "uuid": "4ea6c4c0-7a9c-43ed-bb55-ba37c4cecc22",
   "files": [
     ".json",
     ".png"
@@ -10,7 +10,7 @@
   "subMetas": {
     "6c48a": {
       "importer": "texture",
-      "uuid": "d022e794-eb24-47a5-b3de-a1418756370d@6c48a",
+      "uuid": "4ea6c4c0-7a9c-43ed-bb55-ba37c4cecc22@6c48a",
       "displayName": "M_2D_WaterHit_01",
       "id": "6c48a",
       "name": "texture",
@@ -22,7 +22,7 @@
         "mipfilter": "none",
         "anisotropy": 0,
         "isUuid": true,
-        "imageUuidOrDatabaseUri": "d022e794-eb24-47a5-b3de-a1418756370d",
+        "imageUuidOrDatabaseUri": "4ea6c4c0-7a9c-43ed-bb55-ba37c4cecc22",
         "visible": false
       },
       "ver": "1.0.22",
@@ -37,6 +37,6 @@
     "hasAlpha": true,
     "type": "texture",
     "fixAlphaTransparencyArtifacts": false,
-    "redirect": "d022e794-eb24-47a5-b3de-a1418756370d@6c48a"
+    "redirect": "4ea6c4c0-7a9c-43ed-bb55-ba37c4cecc22@6c48a"
   }
 }

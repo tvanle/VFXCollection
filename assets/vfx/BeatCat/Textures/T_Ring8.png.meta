@@ -2,7 +2,7 @@
   "ver": "1.0.27",
   "importer": "image",
   "imported": true,
-  "uuid": "809bf0fb-c3c6-4a52-959a-6ff85c3ff8a4",
+  "uuid": "ba80422d-52c7-457b-b4ad-ec02254be1df",
   "files": [
     ".json",
     ".png"
@@ -10,7 +10,7 @@
   "subMetas": {
     "6c48a": {
       "importer": "texture",
-      "uuid": "809bf0fb-c3c6-4a52-959a-6ff85c3ff8a4@6c48a",
+      "uuid": "ba80422d-52c7-457b-b4ad-ec02254be1df@6c48a",
       "displayName": "T_Ring8",
       "id": "6c48a",
       "name": "texture",
@@ -22,7 +22,7 @@
         "mipfilter": "none",
         "anisotropy": 0,
         "isUuid": true,
-        "imageUuidOrDatabaseUri": "809bf0fb-c3c6-4a52-959a-6ff85c3ff8a4",
+        "imageUuidOrDatabaseUri": "ba80422d-52c7-457b-b4ad-ec02254be1df",
         "visible": false
       },
       "ver": "1.0.22",
@@ -34,9 +34,9 @@
     }
   },
   "userData": {
-    "hasAlpha": false,
+    "hasAlpha": true,
     "type": "texture",
     "fixAlphaTransparencyArtifacts": false,
-    "redirect": "809bf0fb-c3c6-4a52-959a-6ff85c3ff8a4@6c48a"
+    "redirect": "ba80422d-52c7-457b-b4ad-ec02254be1df@6c48a"
   }
 }

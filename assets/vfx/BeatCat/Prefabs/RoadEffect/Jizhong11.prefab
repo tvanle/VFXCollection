@@ -120,7 +120,7 @@
     },
     "_materials": [
       {
-        "__uuid__": "36c34e0d-c1b6-4681-ba99-eba22ec7a248",
+        "__uuid__": "58c0c653-f247-4a80-9502-9a06157da180",
         "__expectedType__": "cc.Material"
       },
       null
@@ -230,7 +230,7 @@
   },
   {
     "__type__": "cc.CompPrefabInfo",
-    "fileId": "HPEVHsoQgzMVrS+G4svIfA"
+    "fileId": "YNAvgC2fl/JfRKWb6Ah33l"
   },
   {
     "__type__": "cc.GradientRange",
@@ -803,12 +803,12 @@
     "_lengthScale": 1,
     "_mesh": null,
     "_cpuMaterial": {
-      "__uuid__": "36c34e0d-c1b6-4681-ba99-eba22ec7a248",
+      "__uuid__": "58c0c653-f247-4a80-9502-9a06157da180",
       "__expectedType__": "cc.Material"
     },
     "_gpuMaterial": null,
     "_mainTexture": {
-      "__uuid__": "9a9a1907-030c-462d-95eb-a05962c10a8e@6c48a",
+      "__uuid__": "a98b1fb9-efc1-4da6-9c06-067821b454fc@6c48a",
       "__expectedType__": "cc.Texture2D"
     },
     "_useGPU": false,
@@ -822,7 +822,7 @@
     "asset": {
       "__id__": 0
     },
-    "fileId": "RfkelojYoObknW+pp8HdIq",
+    "fileId": "GbIwWP9855dVHGvp99qxE3",
     "nestedPrefabInstanceRoots": null
   },
   {
@@ -886,7 +886,7 @@
     },
     "_materials": [
       {
-        "__uuid__": "fac657b0-021d-49ae-a03e-03bce4225b62",
+        "__uuid__": "a9633dde-7e50-4906-964a-62c4ed1d9020",
         "__expectedType__": "cc.Material"
       },
       null
@@ -996,7 +996,7 @@
   },
   {
     "__type__": "cc.CompPrefabInfo",
-    "fileId": "9LK+ND8NJEXWMT2Z4liFNG"
+    "fileId": "lXb3bt9/qPQY4avEuzrFdW"
   },
   {
     "__type__": "cc.GradientRange",
@@ -1566,12 +1566,12 @@
     "_lengthScale": 1,
     "_mesh": null,
     "_cpuMaterial": {
-      "__uuid__": "fac657b0-021d-49ae-a03e-03bce4225b62",
+      "__uuid__": "a9633dde-7e50-4906-964a-62c4ed1d9020",
       "__expectedType__": "cc.Material"
     },
     "_gpuMaterial": null,
     "_mainTexture": {
-      "__uuid__": "7eb59e66-2b16-4ecc-b437-70deb0810389@6c48a",
+      "__uuid__": "ef2cc44b-f598-4aeb-8ecb-43efa1538192@6c48a",
       "__expectedType__": "cc.Texture2D"
     },
     "_useGPU": false,
@@ -1585,7 +1585,7 @@
     "asset": {
       "__id__": 0
     },
-    "fileId": "Qr7j3RlUN1CyelSDqx8Nzt",
+    "fileId": "ZcKzU0V9xuD2/kLTHhGbI4",
     "nestedPrefabInstanceRoots": null
   },
   {
@@ -1596,7 +1596,7 @@
     "asset": {
       "__id__": 0
     },
-    "fileId": "dmHu3VuXzKXK8lpWSaR6Hu",
+    "fileId": "i9FZMLBJ9Xnv3R6KUoH5hN",
     "instance": null,
     "targetOverrides": null
   }

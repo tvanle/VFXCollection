@@ -2,7 +2,7 @@
   "ver": "1.0.27",
   "importer": "image",
   "imported": true,
-  "uuid": "90e6c7c2-8f3f-4226-af9e-39b78b92c3eb",
+  "uuid": "c45764dc-5db0-4be2-9c62-eb344716fcdd",
   "files": [
     ".json",
     ".png"
@@ -10,7 +10,7 @@
   "subMetas": {
     "6c48a": {
       "importer": "texture",
-      "uuid": "90e6c7c2-8f3f-4226-af9e-39b78b92c3eb@6c48a",
+      "uuid": "c45764dc-5db0-4be2-9c62-eb344716fcdd@6c48a",
       "displayName": "SquareRing_expand",
       "id": "6c48a",
       "name": "texture",
@@ -22,7 +22,7 @@
         "mipfilter": "none",
         "anisotropy": 0,
         "isUuid": true,
-        "imageUuidOrDatabaseUri": "90e6c7c2-8f3f-4226-af9e-39b78b92c3eb",
+        "imageUuidOrDatabaseUri": "c45764dc-5db0-4be2-9c62-eb344716fcdd",
         "visible": false
       },
       "ver": "1.0.22",
@@ -37,6 +37,6 @@
     "hasAlpha": true,
     "type": "texture",
     "fixAlphaTransparencyArtifacts": false,
-    "redirect": "90e6c7c2-8f3f-4226-af9e-39b78b92c3eb@6c48a"
+    "redirect": "c45764dc-5db0-4be2-9c62-eb344716fcdd@6c48a"
   }
 }

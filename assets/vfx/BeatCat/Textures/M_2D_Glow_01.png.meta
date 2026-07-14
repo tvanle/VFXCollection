@@ -2,7 +2,7 @@
   "ver": "1.0.27",
   "importer": "image",
   "imported": true,
-  "uuid": "b51e2255-0d3b-4939-a01a-4475e83a165a",
+  "uuid": "5fb26531-c5db-4909-921a-5bf775c9f962",
   "files": [
     ".json",
     ".png"
@@ -10,7 +10,7 @@
   "subMetas": {
     "6c48a": {
       "importer": "texture",
-      "uuid": "b51e2255-0d3b-4939-a01a-4475e83a165a@6c48a",
+      "uuid": "5fb26531-c5db-4909-921a-5bf775c9f962@6c48a",
       "displayName": "M_2D_Glow_01",
       "id": "6c48a",
       "name": "texture",
@@ -22,7 +22,7 @@
         "mipfilter": "none",
         "anisotropy": 0,
         "isUuid": true,
-        "imageUuidOrDatabaseUri": "b51e2255-0d3b-4939-a01a-4475e83a165a",
+        "imageUuidOrDatabaseUri": "5fb26531-c5db-4909-921a-5bf775c9f962",
         "visible": false
       },
       "ver": "1.0.22",
@@ -37,6 +37,6 @@
     "hasAlpha": true,
     "type": "texture",
     "fixAlphaTransparencyArtifacts": false,
-    "redirect": "b51e2255-0d3b-4939-a01a-4475e83a165a@6c48a"
+    "redirect": "5fb26531-c5db-4909-921a-5bf775c9f962@6c48a"
   }
 }

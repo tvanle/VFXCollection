@@ -2,7 +2,7 @@
   "ver": "1.0.27",
   "importer": "image",
   "imported": true,
-  "uuid": "d2006670-fabb-4094-9024-f371adeb2b29",
+  "uuid": "39297ab6-59b4-40d6-9cb1-c8d291698f1e",
   "files": [
     ".json",
     ".png"
@@ -10,7 +10,7 @@
   "subMetas": {
     "6c48a": {
       "importer": "texture",
-      "uuid": "d2006670-fabb-4094-9024-f371adeb2b29@6c48a",
+      "uuid": "39297ab6-59b4-40d6-9cb1-c8d291698f1e@6c48a",
       "displayName": "BokehDot_RGB_Strong",
       "id": "6c48a",
       "name": "texture",
@@ -22,7 +22,7 @@
         "mipfilter": "none",
         "anisotropy": 0,
         "isUuid": true,
-        "imageUuidOrDatabaseUri": "d2006670-fabb-4094-9024-f371adeb2b29",
+        "imageUuidOrDatabaseUri": "39297ab6-59b4-40d6-9cb1-c8d291698f1e",
         "visible": false
       },
       "ver": "1.0.22",
@@ -37,6 +37,6 @@
     "hasAlpha": true,
     "type": "texture",
     "fixAlphaTransparencyArtifacts": false,
-    "redirect": "d2006670-fabb-4094-9024-f371adeb2b29@6c48a"
+    "redirect": "39297ab6-59b4-40d6-9cb1-c8d291698f1e@6c48a"
   }
 }

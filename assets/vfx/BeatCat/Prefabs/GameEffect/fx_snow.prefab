@@ -117,7 +117,7 @@
     },
     "_materials": [
       {
-        "__uuid__": "56268cb9-616c-4909-90a7-f47db5640e70",
+        "__uuid__": "73d25632-e9ef-4d5b-befa-5d5f00813059",
         "__expectedType__": "cc.Material"
       },
       null
@@ -227,7 +227,7 @@
   },
   {
     "__type__": "cc.CompPrefabInfo",
-    "fileId": "pejY5b68guoKLnGOfv+2br"
+    "fileId": "P7KVyMPXNO7b6V59I5qtHA"
   },
   {
     "__type__": "cc.GradientRange",
@@ -799,12 +799,12 @@
     "_lengthScale": 1,
     "_mesh": null,
     "_cpuMaterial": {
-      "__uuid__": "56268cb9-616c-4909-90a7-f47db5640e70",
+      "__uuid__": "73d25632-e9ef-4d5b-befa-5d5f00813059",
       "__expectedType__": "cc.Material"
     },
     "_gpuMaterial": null,
     "_mainTexture": {
-      "__uuid__": "539969ee-35e8-408b-a5b6-c0074588a58c@6c48a",
+      "__uuid__": "23e577c6-e72d-4a61-aca0-b37d1b9009eb@6c48a",
       "__expectedType__": "cc.Texture2D"
     },
     "_useGPU": false,
@@ -818,7 +818,7 @@
     "asset": {
       "__id__": 0
     },
-    "fileId": "aCotUPpaTWk3cgQ3vf/mNy",
+    "fileId": "MIYnGt2IhCR749nDk/fHEt",
     "nestedPrefabInstanceRoots": null
   },
   {
@@ -829,7 +829,7 @@
     "asset": {
       "__id__": 0
     },
-    "fileId": "e+TX5F3ZsSr6qeyGqlOZ+F",
+    "fileId": "n8hDxXfsd4MRy1Qo1+puSr",
     "instance": null,
     "targetOverrides": null
   }
