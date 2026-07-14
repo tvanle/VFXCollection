@@ -2,7 +2,7 @@
   "ver": "1.0.27",
   "importer": "image",
   "imported": true,
-  "uuid": "79354792-fe98-4521-8de8-e3276c63bf1e",
+  "uuid": "b00ffc04-f2a4-4337-a9c9-c7644e9870da",
   "files": [
     ".json",
     ".png"
@@ -10,7 +10,7 @@
   "subMetas": {
     "6c48a": {
       "importer": "texture",
-      "uuid": "79354792-fe98-4521-8de8-e3276c63bf1e@6c48a",
+      "uuid": "b00ffc04-f2a4-4337-a9c9-c7644e9870da@6c48a",
       "displayName": "heart1",
       "id": "6c48a",
       "name": "texture",
@@ -22,7 +22,7 @@
         "mipfilter": "none",
         "anisotropy": 0,
         "isUuid": true,
-        "imageUuidOrDatabaseUri": "79354792-fe98-4521-8de8-e3276c63bf1e",
+        "imageUuidOrDatabaseUri": "b00ffc04-f2a4-4337-a9c9-c7644e9870da",
         "visible": false
       },
       "ver": "1.0.22",
@@ -37,6 +37,6 @@
     "hasAlpha": true,
     "type": "texture",
     "fixAlphaTransparencyArtifacts": false,
-    "redirect": "79354792-fe98-4521-8de8-e3276c63bf1e@6c48a"
+    "redirect": "b00ffc04-f2a4-4337-a9c9-c7644e9870da@6c48a"
   }
 }
