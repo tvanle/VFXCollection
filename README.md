@@ -64,4 +64,4 @@ Prefabs reference their own textures and materials, so copy whole effect folders
 
 ## License
 
-License: TBD. No LICENSE file exists in the repo yet. Check the terms of the original Unity packages before using these effects in a commercial project.
+Released under the [MIT License](LICENSE). The effects were converted from third-party Unity packages; if you are the author of an original package and want credit or removal, please open an issue.
